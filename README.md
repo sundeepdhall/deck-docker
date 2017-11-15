@@ -1,7 +1,7 @@
 # deck-docker
-# A sample application
-# A Card Deck game that allows users to shuffle the deck and deal a card<br>
-# It is built on Oracle Linux and uses Python and Flask and runs in a docker container<br>
+A sample application
+A Card Deck game that allows users to shuffle the deck and deal a card<br>
+It is built on Oracle Linux and uses Python and Flask and runs in a docker container<br>
 
 To build<br>
 "docker build -t deck-docker:latest ."<br>
