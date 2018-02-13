@@ -20,7 +20,7 @@ def list():
 		cards = config['Deck']['spades'] + config['Deck']['hearts'] + config['Deck']['diamonds'] + config['Deck']['clubs'] 
 		session['my_cards'] =  cards
 	
-	return "<center><b>Card Game</b></center> <br>" + json.dumps(cards) + "<br> <b><a href = '/deal'>deal</a> <b><a href = '/shuffle'>shuffle</a></b> <b><a href = '/reset'>reset</a>"
+	return "<center><b>This is a Card Game</b></center> <br>" + json.dumps(cards) + "<br> <b><a href = '/deal'>deal</a> <b><a href = '/shuffle'>shuffle</a></b> <b><a href = '/reset'>reset</a>"
 
 @app.route('/shuffle')
 def shuffle():
@@ -38,7 +38,7 @@ def deal():
 	newlist = cards[:i] + cards[i+1:]
 	session.pop('my_cards', None)
 	session['my_cards'] =  newlist
-	return "<center><b>Card Game</b></center> <br>" + json.dumps(newlist) + "<br> <b><a href = '/deal'>deal</a></b> <b><a href = '/shuffle'> shuffle</a> <b><a href = '/reset'> reset</a> <br> Your Card " + acard
+	return "<center><b>This is a Card Game</b></center> <br>" + json.dumps(newlist) + "<br> <b><a href = '/deal'>deal</a></b> <b><a href = '/shuffle'> shuffle</a> <b><a href = '/reset'> reset</a> <br> Your Card " + acard
 
 @app.route('/reset')
 def reset():
@@ -46,4 +46,4 @@ def reset():
 	return redirect(url_for('list'))
 
 if __name__ == "__main__":
-	app.run(host="0.0.0.0", debug=True, port=80)
+	app.run(host="0.0.0.0", debug=True, port=8000)
