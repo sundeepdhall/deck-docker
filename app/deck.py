@@ -20,7 +20,7 @@ def list():
 		cards = config['Deck']['spades'] + config['Deck']['hearts'] + config['Deck']['diamonds'] + config['Deck']['clubs'] 
 		session['my_cards'] =  cards
 	
-	return "<center><b>This is a Simple Card Game</b></center> <br>" + json.dumps(cards) + "<br> <b><a href = '/deal'>deal</a> <b><a href = '/shuffle'>shuffle</a></b> <b><a href = '/reset'>reset</a>"
+	return "<center><b>This is a Basic Card Game</b></center> <br>" + json.dumps(cards) + "<br> <b><a href = '/deal'>deal</a> <b><a href = '/shuffle'>shuffle</a></b> <b><a href = '/reset'>reset</a>"
 
 @app.route('/shuffle')
 def shuffle():
